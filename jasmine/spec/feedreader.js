@@ -11,7 +11,7 @@ describe('RSS Feeds', function() { /* RSS feed testing unit */
 
         /* Test if allFeeds object and ensures it has a URL defined nd that the URL is not empty.*/
     it("has an URL defined and the URL is not empty", function() {
-        allFeeds.forEach(function(feed) {fined
+        allFeeds.forEach(function(feed) {
         expect(feed.url).toBeDefined(); /* test feed to be defined*/
         expect(feed.url.length).not.toBe(0); /* test feed not to be empty*/
         expect(feed.url).toMatch(/^(http|https):\/\//); /* test feed prefix start*/
@@ -57,9 +57,8 @@ describe("Initial Entries", function() { /* third test units - entries*/
             });
         });
     it('when the loadFeed function is called has a single .entry within the .feed container', function(done) {
-       const parent = $('.feed'); /* feed variable*/
-       const entries = $('.entry'); /* entries variable*/
-       expect(parent.entries.length).toBeGreaterThan(0); /* Test if feed entris aren't empty*/
+       
+       expect($('.feed .entry').length).toBeGreaterThan(0); /* Test if feed entris aren't empty*/
       done();
     });
     });
