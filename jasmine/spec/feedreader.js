@@ -57,8 +57,9 @@ describe("Initial Entries", function() { /* third test units - entries*/
             });
         });
     it('when the loadFeed function is called has a single .entry within the .feed container', function(done) {
-       
-       expect($('.feed .entry').length).toBeGreaterThan(0); /* Test if feed entris aren't empty*/
+       const parent = $('.feed'); /* feed variable*/
+       const entries = $('.entry'); /* entries variable*/
+       expect(parent.entries.length).toBeGreaterThan(0); /* Test if feed entris aren't empty*/
       done();
     });
     });
